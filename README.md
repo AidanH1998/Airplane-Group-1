@@ -8,6 +8,8 @@ COVID-19 once stalled much of airline businesses as travel became scarce. In rec
 
 We found an airline dataset with 539383 instances and 8 different features on Kaggle and thought it was a good dataset to utilize for us. It includes location, whether the flight was delayed or not, airline, time/date, etc. 
 
+https://www.kaggle.com/datasets/jimschacko/airlines-dataset-to-predict-a-delay
+
 ###### WHAT WE HOPE TO FIND WITH THE ANALYSIS
 
 We hope to be able to predict whether a flight will have a delay or not. 
