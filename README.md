@@ -24,3 +24,5 @@ Airlines.csv
 
 ### PRESENTATION
 
+View our project on Google Slides:
+(https://docs.google.com/presentation/d/1Gdb_rvwP0_uNhjOWyThWgazxaziDxe8qXib3i6_Qr8g/edit#slide=id.g13c2af1fd4b_2_26727)
