@@ -21,3 +21,6 @@ We hope to be able to predict whether a flight will have a delay or not.
 ### DATABASE
 
 Airlines.csv
+
+### PRESENTATION
+
