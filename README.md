@@ -40,13 +40,9 @@ The Link to the Database downloaded can be found [here.](https://www.kaggle.com/
 
 ## Segment 2
 
-***Description of preliminary data preprocessing***
-
 Column titles were update as well as 2 tables created. Table 1 is the features table with a converted DayOfWeek column that lists a string of the actual weekday. Table 2 is our target table that includes the airline abbreviations and delay. 
 
-***Description of preliminary feature engineering and preliminary feature selection, including their decision-making process***
-
-We decided to keep all columns as features. We felt that these columns would best fit the questions we are aiming to answer with the unique identified being flight number. These include: 
+We decided to keep all columns as features (except delay). We felt that these columns would best fit the questions we are aiming to answer with the unique identified being flight number. These include: 
 - Flight
 - airline
 - departing_airport
@@ -55,7 +51,17 @@ We decided to keep all columns as features. We felt that these columns would bes
 - delay_mins
 - flight_length
 
+ We created a connection between sqlite3 and Airlines.db, then addded features_df and target_df to this database. After this, we commited the connection and then executed sql databse in SQLiteStudio. The tables were merged as an OUTERJOIN to complete the full table as this adds the delay column and includes the airlines. 
+
+![airlines_db_join.png](airlines_db_join.png)
+
+***Description of preliminary data preprocessing***
+
+***Description of preliminary feature engineering and preliminary feature selection, including their decision-making process***
+
 ***Description of how data was split into training and testing splits***
+
+***Explanation of model choice, including limitations and benefits***
 
  We created a connection between sqlite3 and Airlines.db, then addded features_df and target_df to this database. After this, we commited the connection and then executed sql databse in SQLiteStudio. The tables were merged as an OUTERJOIN to complete the full table as this adds the delay column and includes the airlines. 
 
