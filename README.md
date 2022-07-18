@@ -38,7 +38,7 @@ The goal of this project is to build a flight delay prediction model that predic
 
 The Link to the Database downloaded can be found [here.](https://www.kaggle.com/datasets/jimschacko/airlines-dataset-to-predict-a-delay?datasetId=2285093&group=owned)
 
-## Segment 2
+### SEGMENT 2
 
 Column titles were update as well as 2 tables created. Table 1 is the features table with a converted DayOfWeek column that lists a string of the actual weekday. Table 2 is our target table that includes the airline abbreviations and delay. 
 
