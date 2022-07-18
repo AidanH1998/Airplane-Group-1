@@ -30,15 +30,33 @@ The goal of this project is to build a flight delay prediction model that predic
 - Departing Airport
 - Day of Week 
 
+## Data Exploration Phase
+
+We will explore and reorganize the data by using sqlite3 and connecting it to Airline.csv 
+
+## Data Analysis Phase
+
+We will analyze the data in conjunction to the previous step of data exploration and also by creating a ***dashboard*** which will include various graphs and visual representations using Tableau (which will be connected to the Machine Learning model in order to provide live feedback of the data). 
+
 ## Machine Learning Model 
 
 ***Random Forest Classifier***
+
+### SEGMENT 2
+
+***Description of preliminary data preprocessing***
+
+***Description of preliminary feature engineering and preliminary feature selection, including their decision-making process***
+
+***Description of how data was split into training and testing splits***
+
+***Explanation of model choice, including limitations and benefits***
 
 ## Database
 
 The Link to the Database downloaded can be found [here.](https://www.kaggle.com/datasets/jimschacko/airlines-dataset-to-predict-a-delay?datasetId=2285093&group=owned)
 
-## Segment 2
+### SEGMENT 2
 
 Column titles were update as well as 2 tables created. Table 1 is the features table with a converted DayOfWeek column that lists a string of the actual weekday. Table 2 is our target table that includes the airline abbreviations and delay. 
 
@@ -55,13 +73,15 @@ We decided to keep all columns as features (except delay). We felt that these co
 
 ![airlines_db_join.png](airlines_db_join.png)
 
-***Description of preliminary data preprocessing***
+## Dashboard
 
-***Description of preliminary feature engineering and preliminary feature selection, including their decision-making process***
+###### TOOLS THAT WILL BE USEFUL TO CREATE THE FINAL DASHBOARD
 
-***Description of how data was split into training and testing splits***
+- Tableau
+- Machine Learning model
 
-***Explanation of model choice, including limitations and benefits***
+###### DESCRIPTION OF INTERACTIVE ELEMENT
 
- We created a connection between sqlite3 and Airlines.db, then addded features_df and target_df to this database. After this, we commited the connection and then executed sql databse in SQLiteStudio. The tables were merged as an OUTERJOIN to complete the full table as this adds the delay column and includes the airlines. 
-
+There will be two to three main components to the ***Dashboard***, 
+- An interactive map of the U.S. where data points/analysis will show when user hovers over certain locations (and when user clicks into the state, they will be shown to a new page(?) of more details and probability of flight delay
+- Percentages and table rankings of different metrics that is live and connected to the ML model (i.e. "top airports with most delays", "worst airlines to fly on based on delays within last x days", etc.)
