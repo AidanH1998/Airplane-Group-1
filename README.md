@@ -26,3 +26,16 @@ Airlines.csv
 
 View our project on Google Slides:
 (https://docs.google.com/presentation/d/1Gdb_rvwP0_uNhjOWyThWgazxaziDxe8qXib3i6_Qr8g/edit#slide=id.g13c2af1fd4b_2_26727)
+
+### DASHBOARD
+
+###### TOOLS THAT WILL BE USEFUL TO CREATE THE FINAL DASHBOARD
+
+- Tableau
+- Machine Learning model
+
+###### DESCRIPTION OF INTERACTIVE ELEMENT
+
+There will be two to three main components to the ***Dashboard***, 
+- An interactive map of the U.S. where data points/analysis will show when user hovers over certain locations (and when user clicks into the state, they will be shown to a new page(?) of more details and probability of flight delay
+- Percentages and table rankings of different metrics that is live and connected to the ML model (i.e. "top airports with most delays", "worst airlines to fly on based on delays within last x days", etc.)
