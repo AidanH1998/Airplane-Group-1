@@ -52,8 +52,6 @@ We will analyze the data in conjunction to the previous step of data exploration
 
 ***Explanation of model choice, including limitations and benefits***
 
- We created a connection between sqlite3 and Airlines.db, then addded features_df and target_df to this database. After this, we commited the connection and then executed sql databse in SQLiteStudio. The tables were merged as an OUTERJOIN to complete the full table as this adds the delay column and includes the airlines. 
-
 ## Database
 
 The Link to the Database downloaded can be found [here.](https://www.kaggle.com/datasets/jimschacko/airlines-dataset-to-predict-a-delay?datasetId=2285093&group=owned)
@@ -79,6 +77,7 @@ We decided to keep all columns as features (except delay). We felt that these co
 
 ###### TOOLS THAT WILL BE USEFUL TO CREATE THE FINAL DASHBOARD
 
+###### TOOLS THAT WILL BE USEFUL TO CREATE THE FINAL DASHBOARD
 - Tableau
 - Machine Learning model
 
@@ -86,4 +85,6 @@ We decided to keep all columns as features (except delay). We felt that these co
 
 There will be two to three main components to the ***Dashboard***, 
 - An interactive map of the U.S. where data points/analysis will show when user hovers over certain locations (and when user clicks into the state, they will be shown to a new page(?) of more details and probability of flight delay
+
 - Percentages and table rankings of different metrics that is live and connected to the ML model (i.e. "top airports with most delays", "worst airlines to fly on based on delays within last x days", etc.)
+
