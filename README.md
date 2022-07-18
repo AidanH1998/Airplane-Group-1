@@ -29,6 +29,8 @@ View our project on Google Slides:
 
 ### DASHBOARD
 
+###### STORYBOARD
+
 ###### TOOLS THAT WILL BE USEFUL TO CREATE THE FINAL DASHBOARD
 
 - Tableau
