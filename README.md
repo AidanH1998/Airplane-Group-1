@@ -30,9 +30,19 @@ The goal of this project is to build a flight delay prediction model that predic
 - Departing Airport
 - Day of Week 
 
+## Data Exploration Phase
+
+We will explore and reorganize the data by using sqlite3 and connecting it to Airline.csv 
+
+## Data Analysis Phase
+
+We will analyze the data in conjustion to the previous step of data exploration and also by creating a ***dashboard*** which will include various graphs and visual representations using Tableau (which will be connected to the Machine Learning model in order to provide live feedback of the data). 
+
 ## Machine Learning Model 
 
 ***Random Forest Classifier***
+
+### SEGMENT 2
 
 ***Description of preliminary data preprocessing***
 
