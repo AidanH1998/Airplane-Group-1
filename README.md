@@ -53,27 +53,55 @@ However, we quickly realized that the above would be difficult to predict based 
 
 ## Machine Learning Model 
 
-***Supervised Learning - Logistic Regression Classification Model***
-After exploring the data we decided to proceed with a Logistic Regression Classification Model  mainly because we narrowed down our goal from including continuous variables to only attempting to predict a binary outcome - "delayed" and "not delayed". 
-
-### SEGMENT 2
+***Supervised Learning - Random Forest Classification Model***
+After exploring the data we decided to proceed with a Random Forest Classification Model mainly because we narrowed down our goal from including continuous variables to only attempting to predict a binary outcome - "delayed" and "not delayed". 
 
 ***Description of preliminary data preprocessing***
-Data preprocessing included data cleanup such as converting the numbered days of week to the actual day of the week within the DataFrame. 
+
+Data preprocessing included:
+- reading in the data 
+- data cleanup such as converting the numbered days of week to the actual day of the week within the DataFrame
 
 ***Description of preliminary feature engineering and preliminary feature selection, including their decision-making process***
 
-At first, we selected features as all columns except the target column which is the "delay" column. However, we weren't 100% certain what the "Time" column indicated. Therefore, we removed the time column, flight number, and ID column and created a new DataFrame. Within that new DataFrame, our target column remained the same and our features became Length, Airline, AirportFrom, AirportTo, DayOfWeek.
+Initial feature selection: 
+- Time
+- Flight
+- Departing Airport 
+- Arriving Airport
+- DayOfWeek 
+- ID
+- Length 
+
+Revised feature selection: 
+- Departing Airport
+- Arriving Airport 
+- DayOfWeek
+- Length
+
+At first, we selected features as all columns except the target column which is the "delay" column. However, we weren't 100% certain what the "Time" column indicated. Therefore, we removed the time column, flight number, and ID column and created a new DataFrame.
 
 ***Description of how data was split into training and testing splits***
-We split the data into training and testing sets - used random_state to make the data reproducible and ensure that same rows are assigned to train and test sets. "X" was assigned to our features and "y" was assigned to our target "delay".
+
+- Split the data into training and testing sets - 
+- assigned features to "X" variable
+- converted features columns to numbers using "pd.get_dummies()" 
+- assign targets to "y" variable (Delay)
 
 
 ***Explanation of model choice, including limitations and benefits***
-Random Forest Classified was chosen because of its ability to rank importance of input variables, run efficiently on larger datasets, and its robustness against overfitting. However, some limitations include slowness which makes the model ineffective for real-time predictions. 
+
+Random Forest Classifier was chosen because of its ability to rank importance of input variables, run efficiently on larger datasets, and its robustness against overfitting. However, some limitations include slowness which makes the model ineffective for real-time predictions. 
+
+For the purpose of this project, we still chose to proceed with Random Forest Classifier to try to simplify the many features to take into consideration when it comes to flight delay. 
 
 ***Explanation of how model was trained***
-Data was split into training and testing sets. Random state = 1 was used to make the data reproducible and ensure that the same rows are assigned to corresponding train and test sets. Data was trained using random forest classifier.
+
+Data was split into training and testing sets. Data was trained using random forest classifier. 
+- imported datasets from Sklearn RandomForestClassifier
+- Test size is 70% training and 30% test
+- Trained the model using training sets - initial estimators increased from n_estimators = 100 to n_estimators = 128 in an effort to increase accuracy)
+
 
 ## Database
 
