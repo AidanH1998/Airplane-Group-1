@@ -23,34 +23,57 @@ Columns include:
 - VIII. Length 
 - IX. Delay
 
-## Questions hope to answer with the data
-The goal of this project is to build a flight delay prediction model that predicts whether a given flight will be delayed depending on factors such as: 
+## Initial Questions we hoped to answer with the data
+The initial goal of this project is to build a flight delay prediction model that predicts whether a flight will be delayed depending on factors such as: 
 
 - Airline
 - Departing Airport
 - Day of Week 
+- How long a flight will be delayed
+
+However, we quickly realized that the above would be difficult to predict based on the given information in the dataset. Additionally, some of the columns were unclear: specifically the "Time" column. So this column was dropped. 
 
 ## Data Exploration Phase
 
-We will explore and reorganize the data by using sqlite3 and connecting it to Airline.csv 
+- Downloaded into Jupyter Notebook
+- N/A (null) rows removed
+- Identified count of 18 different Airlines
+- Identified count of 293 Airports (all domestic flights)
+- Changed DayOfWeek numerical values to corresponding day 
+- Dropped “Time” column
+- Create new DataFrame and export to CSV and DB
+
 
 ## Data Analysis Phase
 
-We will analyze the data in conjunction to the previous step of data exploration and also by creating a ***dashboard*** which will include various graphs and visual representations using Tableau (which will be connected to the Machine Learning model in order to provide live feedback of the data). 
+- Compare delayed frequency between departing airports 
+- Compare delayed frequency by Airline 
+- Create regression model to predict flight delay based on airline, departing airport, arriving airport, and day of week with decision trees. 
+- Sort features by their importance 
 
 ## Machine Learning Model 
 
-***Random Forest Classifier***
+***Supervised Learning - Logistic Regression Classification Model***
+After exploring the data we decided to proceed with a Logistic Regression Classification Model  mainly because we narrowed down our goal from including continuous variables to only attempting to predict a binary outcome - "delayed" and "not delayed". 
 
 ### SEGMENT 2
 
 ***Description of preliminary data preprocessing***
+Data preprocessing included data cleanup such as converting the numbered days of week to the actual day of the week within the DataFrame. 
 
 ***Description of preliminary feature engineering and preliminary feature selection, including their decision-making process***
 
+At first, we selected features as all columns except the target column which is the "delay" column. However, we weren't 100% certain what the "Time" column indicated. Therefore, we removed the time column, flight number, and ID column and created a new DataFrame. Within that new DataFrame, our target column remained the same and our features became Length, Airline, AirportFrom, AirportTo, DayOfWeek.
+
 ***Description of how data was split into training and testing splits***
+We split the data into training and testing sets - used random_state to make the data reproducible and ensure that same rows are assigned to train and test sets. "X" was assigned to our features and "y" was assigned to our target "delay".
+
 
 ***Explanation of model choice, including limitations and benefits***
+Random Forest Classified was chosen because of its ability to rank importance of input variables, run efficiently on larger datasets, and its robustness against overfitting. However, some limitations include slowness which makes the model ineffective for real-time predictions. 
+
+***Explanation of how model was trained***
+Data was split into training and testing sets. Random state = 1 was used to make the data reproducible and ensure that the same rows are assigned to corresponding train and test sets. Data was trained using random forest classifier.
 
 ## Database
 
@@ -60,7 +83,7 @@ The Link to the Database downloaded can be found [here.](https://www.kaggle.com/
 
 Column titles were update as well as 2 tables created. Table 1 is the features table with a converted DayOfWeek column that lists a string of the actual weekday. Table 2 is our target table that includes the airline abbreviations and delay. 
 
-We decided to keep all columns as features (except delay). We felt that these columns would best fit the questions we are aiming to answer with the unique identified being flight number. These include: 
+We originally decided to keep all columns as features (except delay). We felt that these columns would best fit the questions we are aiming to answer with the unique identified being flight number. These include: 
 - Flight
 - airline
 - departing_airport
@@ -74,8 +97,6 @@ We decided to keep all columns as features (except delay). We felt that these co
 ![airlines_db_join.png](airlines_db_join.png)
 
 ## Dashboard
-
-###### TOOLS THAT WILL BE USEFUL TO CREATE THE FINAL DASHBOARD
 
 ###### TOOLS THAT WILL BE USEFUL TO CREATE THE FINAL DASHBOARD
 - Tableau
