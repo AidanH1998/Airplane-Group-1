@@ -31,6 +31,9 @@ View our project on Google Slides:
 
 ###### STORYBOARD
 
+We want to figure out if there are any trends to the data that would be more easily detectable through Tableau analysis. See Tableau Dashboard here: 
+(https://public.tableau.com/app/profile/maggie.meng/viz/AirportDelaysProjectWorkbook/AirportFromDelayDensityviaMap?publish=yes)
+
 ###### TOOLS THAT WILL BE USEFUL TO CREATE THE FINAL DASHBOARD
 
 - Tableau
