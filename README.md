@@ -126,6 +126,8 @@ We originally decided to keep all columns as features (except delay). We felt th
 
 ## Dashboard
 
+Tableau Dashboard can be viewed [here.](https://public.tableau.com/app/profile/maggie.meng/viz/AirportDelaysProjectWorkbook/AirportFromDelayDensityviaMap?publish=yes)
+
 ###### TOOLS THAT WILL BE USEFUL TO CREATE THE FINAL DASHBOARD
 - Tableau
 - Machine Learning model
@@ -137,3 +139,9 @@ There will be two to three main components to the ***Dashboard***,
 
 - Percentages and table rankings of different metrics that is live and connected to the ML model (i.e. "top airports with most delays", "worst airlines to fly on based on delays within last x days", etc.)
 
+###### ANALYSIS
+
+The main reason why we wanted to build a Tableau Dashboard with data that is represented on a map is because we were curious as to whether there are underlying trends and/or features that stood out and was most impactful to the delay of flights. However, through this analysis, we realized that the features contained in the original csv (and thus the new version that we have organized) were not suficient to provide reasons behind any delays and did not show any visible trends. 
+- This analysis helped us realize that we probably should have looked for datasets with more specific features and/or found multiple datasets that could work in conjuction. 
+
+Further, we were able to complicate the bar graphs that were previously created through our Database and SQL work. For example, Tableau allows us to divide the delayed flights and non delayed flights from an airline within a bar of total flights. Through this, we were able to note that most airlines have a 50/50 delay to non_delay ratio, or somewhere near that range. Overall, it was helpful to be able to visually see the data in more detail. 
